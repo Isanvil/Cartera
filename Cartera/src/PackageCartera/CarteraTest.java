@@ -87,7 +87,8 @@ public class CarteraTest {
     @Test
     void retirar6000EnCuentoCon7000ElSaldoEs1000(){
         Cuenta c = new Cuenta();
-        c.ingresar(7000);
+        c.ingresar(6000);
+        c.ingresar(1000);
         c.retirar(6000);
         assertEquals(1000, c.getSaldo());
     }
@@ -95,7 +96,8 @@ public class CarteraTest {
     @Test
     void retirar6000_01EnCuentaCon7000ElSaldoSigueSiendo7000(){
         Cuenta c = new Cuenta();
-        c.ingresar(7000);
+        c.ingresar(6000);
+        c.ingresar(1000);
         c.retirar(6000.01);
         assertEquals(7000, c.getSaldo());
     }
